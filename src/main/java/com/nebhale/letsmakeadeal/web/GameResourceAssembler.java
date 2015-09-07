@@ -30,6 +30,7 @@ final class GameResourceAssembler extends ResourceAssemblerSupport<Game, GameRes
 
     public GameResource toResource(Game game) {
         // TODO Implementation
+    	return null;
     }
 
 }

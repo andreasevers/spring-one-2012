@@ -26,6 +26,7 @@ final class DoorResourceAssembler {
 
     DoorResource toResource(Game game, Door door) {
         // TODO Implementation
+    	return null;
     }
 
 }

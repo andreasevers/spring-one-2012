@@ -17,20 +17,25 @@
 package com.nebhale.letsmakeadeal.web;
 
 import static org.junit.Assert.assertTrue;
-import static org.springframework.test.web.mock.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.mock.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.mock.servlet.request.MockMvcRequestBuilders.put;
-import static org.springframework.test.web.mock.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.io.UnsupportedEncodingException;
 
 import org.junit.Test;
 import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import com.jayway.jsonpath.JsonPath;
 
 public final class GamesControllerIntegrationTest {
 
+	// TODO: setup
+	MockMvc mockMvc = MockMvcBuilders.standaloneSetup(null).build();
+	
     @Test
     public void playAGame() throws Exception {
         String gameLocation = this.mockMvc.perform(post("/games")) //
